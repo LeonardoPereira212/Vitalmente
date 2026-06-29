@@ -1,8 +1,9 @@
 import MenuFuncionario from "../MenuFuncionario/MenuFuncionario"
 
 const HomeFuncionario = () => {
-    return (
-        <div>
+    
+  return (
+        <div className="container">
 
 
           <MenuFuncionario />

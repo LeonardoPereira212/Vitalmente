@@ -1,0 +1,269 @@
+:root {
+  --primary: #0F6CBD;
+  --secondary: #16A085;
+  --background: #EEF4F8;
+  --white: #FFF;
+  --text: #243746;
+  --gray: #758391;
+  --border: #D8E3EA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.container {
+  width: 1250px;
+  min-height: 760px;
+  background: #fff;
+  display: flex;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .08);
+}
+
+/* =======================
+        BANNER
+======================= */
+
+.banner {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, #0F6CBD, #16A085);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 70px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, .18),
+    transparent 45%
+  );
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 430px;
+}
+
+.logo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.logo i {
+  font-size: 36px;
+}
+
+.banner h1 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* =======================
+      FORMULÁRIO
+======================= */
+
+.formArea {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.formBox {
+  width: 100%;
+  max-width: 470px;
+}
+
+.formBox h2 {
+  font-size: 34px;
+  color: var(--text);
+}
+
+.subtitle {
+  margin: 8px 0 35px;
+  color: var(--gray);
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.inputGroup {
+  position: relative;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.inputGroup i {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8A98A7;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 17px 20px 17px 50px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  transition: .3s;
+}
+
+.inputGroup input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(15, 108, 189, .08);
+}
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0 30px;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.terms a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .3s;
+}
+
+button[type="submit"] {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background: #0b5da4;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #dce5ec;
+}
+
+.divider span {
+  margin: 0 15px;
+  color: #8A98A7;
+}
+
+.google {
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.google:hover {
+  background: #f7f9fb;
+}
+
+.google i {
+  color: #DB4437;
+  margin-right: 10px;
+}
+
+.loginLink {
+  margin-top: 35px;
+  text-align: center;
+  color: var(--gray);
+}
+
+.loginLink a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.loginLink a:hover {
+  text-decoration: underline;
+}
+
+/* =======================
+      RESPONSIVO
+======================= */
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .banner {
+    min-height: 320px;
+  }
+
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .formArea {
+    padding: 35px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .formBox {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,300 @@
+:root {
+  --primary: #0F6CBD;
+  --secondary: #16A085;
+  --background: #EEF4F8;
+  --white: #FFFFFF;
+  --text: #243746;
+  --gray: #7A8793;
+  --border: #DCE5EC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.container {
+  width: 1200px;
+  min-height: 700px;
+  background: var(--white);
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
+}
+
+/* =======================
+        LADO ESQUERDO
+======================= */
+
+.banner {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, #0F6CBD, #16A085);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 60px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, .15),
+    transparent 45%
+  );
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 430px;
+}
+
+.logo {
+  font-size: 28px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 700;
+}
+
+.logo i {
+  font-size: 35px;
+}
+
+.banner h1 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  line-height: 1.9;
+  font-size: 18px;
+  opacity: .95;
+}
+
+/* =======================
+         LOGIN
+======================= */
+
+.loginArea {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 420px;
+}
+
+.loginBox h2 {
+  font-size: 34px;
+  color: var(--text);
+}
+
+.subtitle {
+  color: var(--gray);
+  margin: 10px 0 40px;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputGroup i {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8E9AA6;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 17px 20px 17px 50px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  transition: .3s;
+  font-size: 15px;
+}
+
+.inputGroup input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(15, 108, 189, .08);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.options a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.options label {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .3s;
+}
+
+button:first-of-type {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+button:first-of-type:hover {
+  background: #0b5ea5;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 35px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #E1E7EC;
+}
+
+.divider span {
+  margin: 0 15px;
+  color: #8C97A4;
+}
+
+.google {
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.google:hover {
+  background: #F7F9FB;
+}
+
+.google i {
+  color: #DB4437;
+  margin-right: 10px;
+}
+
+.register {
+  margin-top: 35px;
+  text-align: center;
+  color: var(--gray);
+}
+
+.register a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.guestAccess {
+  margin: 20px 0 15px;
+  text-align: center;
+  color: var(--gray);
+  font-size: 14px;
+  position: relative;
+}
+
+.guestAccess::before,
+.guestAccess::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background: var(--border);
+}
+
+.guestAccess::before {
+  left: 0;
+}
+
+.guestAccess::after {
+  right: 0;
+}
+
+.guestButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: .3s;
+  background: #fff;
+}
+
+.guestButton:hover {
+  background: #f7f9fb;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.guestButton i {
+  font-size: 16px;
+}
+
+/* =======================
+      RESPONSIVO
+======================= */
+
+@media (max-width: 960px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .banner {
+    min-height: 320px;
+  }
+
+  .banner h1 {
+    font-size: 36px;
+  }
+}
